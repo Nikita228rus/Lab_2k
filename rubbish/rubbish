@@ -1,0 +1,95 @@
+'Функция создания словаря(чтение из файла)'
+'''def tab_enc():
+    with open("Таблица замены.txt", 'r') as t:
+        keys = t.readline()
+        vals = t.readline()
+    keys = keys.split()
+    vals = vals.split()
+    enc_tab = {}
+    for i in range(len(keys)):
+        enc_tab[keys[i]] = vals[i]
+    return enc_tab
+'''
+
+'''def tab_dec():
+    with open("Таблица замены.txt", 'r') as t:
+        vals = t.readline()
+        keys = t.readline()
+    keys = keys.split()
+    vals = vals.split()
+    dec_tab = {}
+    for i in range(len(keys)):
+        dec_tab[keys[i]] = vals[i]
+    print(dec_tab)
+    return dec_tab'''
+
+
+
+"""def tab_enc():
+    with open("Таблица замены32.txt", 'r') as t:
+        keys = t.readline()
+        vals = t.readline()
+    keys = keys.split()
+    vals = vals.split()
+    enc_tab = {}
+    for i in range(len(keys)):
+        enc_tab[keys[i]] = vals[i]
+#    print(enc_tab)
+    return enc_tab
+
+def tab_dec():
+    with open("Таблица замены32.txt", 'r') as t:
+        vals = t.readline()
+        keys = t.readline()
+    keys = keys.split()
+    vals = vals.split()
+    dec_tab = {}
+    for i in range(len(keys)):
+        dec_tab[keys[i]] = vals[i]
+#    print(dec_tab)
+    return dec_tab"""
+
+
+'''str_enc = input("Введите сообщение: ")
+str_enc.encode("ascii")
+to_bin = ''
+# to_bin = "".join(format(ord(x), "b") for x in str_enc)
+for i in str_enc:
+    to_bin = ''.join(format(x, '08b') for x in bytearray(str_enc, 'utf-8'))
+print(to_bin)
+print(len(to_bin))
+count = 0
+while len(to_bin) % 24 != 0:
+    to_bin += "00000000"
+    count += 1
+print(to_bin)
+l_code = []
+for i in range(0, len(to_bin), 6):
+    l_code.append(to_bin[i:i + 6])
+print(l_code)'''
+
+'''enc_tab = tab_enc()
+e_text = to_base64(l_code, enc_tab, count)
+dec_tab = tab_dec()
+to_ascii(e_text, dec_tab)'''
+
+"""str_enc = input("Введите сообщение: ")
+str_enc.encode("ascii")
+to_bin = ''
+
+for i in str_enc:
+    to_bin = ''.join(format(x, '08b') for x in bytearray(str_enc, 'utf-8'))
+
+flag = 0
+while len(to_bin) % 24 != 0:
+    to_bin += "00000000"
+    flag += 1
+
+l_code = []
+for i in range(0, len(to_bin), 6):
+    l_code.append(to_bin[i:i + 6])"""
+
+
+"""test = to_base64(alf_dict)
+print(test)
+print(to_ascii(test))"""
